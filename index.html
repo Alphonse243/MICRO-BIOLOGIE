@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche révision : Microbiologie générale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1e2b3c;
+            line-height: 1.5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0,20,40,0.12);
+            padding: 30px 35px;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #0a2f44;
+            border-left: 10px solid #2b7a78;
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .subhead {
+            color: #2d5d6b;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            border-bottom: 2px solid #cbd5e0;
+            padding-bottom: 12px;
+        }
+        h2 {
+            font-size: 1.9rem;
+            margin: 40px 0 15px 0;
+            color: #1e5266;
+            border-bottom: 3px solid #8fc1d4;
+            padding-bottom: 6px;
+            background: linear-gradient(to right, #e2f0f7, transparent);
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 12px 0;
+            color: #0b3b4b;
+            background: #ebf5f8;
+            padding: 6px 15px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        h4 {
+            font-weight: 600;
+            color: #144a5e;
+            margin: 18px 0 6px;
+            font-size: 1.2rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin: 15px 0 25px;
+        }
+        .card {
+            background: #f9fcff;
+            border: 1px solid #d7e5ed;
+            border-radius: 24px;
+            padding: 18px 20px;
+            box-shadow: 0 4px 12px rgba(0,30,50,0.05);
+            transition: 0.15s;
+        }
+        .card:hover {
+            background: #f0f9ff;
+            border-color: #92bdd3;
+        }
+        .card strong {
+            color: #005e6e;
+        }
+        ul, ol {
+            padding-left: 25px;
+            margin: 8px 0 12px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 25px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,20,30,0.08);
+        }
+        th {
+            background: #1d5b6e;
+            color: white;
+            font-weight: 600;
+            padding: 12px 10px;
+            font-size: 1rem;
+        }
+        td {
+            background: #f2f8fc;
+            padding: 10px 12px;
+            border-bottom: 1px solid #cbdbe7;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .badge {
+            background: #2b7a78;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-right: 8px;
+            letter-spacing: 0.3px;
+        }
+        .eval-box {
+            background: #edf2f9;
+            border: 2px dashed #2f7188;
+            border-radius: 32px;
+            padding: 28px 30px;
+            margin: 45px 0 20px;
+        }
+        .eval-box h2 {
+            margin-top: 0;
+            background: none;
+            border-bottom: 2px solid #1b5f74;
+        }
+        .qcm {
+            background: white;
+            border-radius: 20px;
+            padding: 18px 25px;
+            margin: 18px 0;
+            border-left: 10px solid #3f9eb5;
+        }
+        .question {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .options {
+            list-style-type: upper-latin;
+            padding-left: 30px;
+        }
+        .btn-like {
+            background: #247a8a;
+            color: white;
+            border: none;
+            padding: 5px 16px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #bdd8e5, transparent);
+            margin: 30px 0;
+        }
+        .small-note {
+            font-size: 0.9rem;
+            color: #3f5f6b;
+            background: #f1f9fc;
+            border-radius: 16px;
+            padding: 12px 20px;
+            margin: 15px 0;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+            color: #5f7e8c;
+            border-top: 1px solid #c8dbe5;
+            padding-top: 15px;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🦠 MICROBIOLOGIE GÉNÉRALE · FICHE DE RÉVISION</h1>
+    <div class="subhead">Bactériologie · Virologie · Mycologie — D’après cours Pr Dr Charles KAYEMBE (2018-2019)</div>
+
+    <!-- ========== SOMMAIRE RAPIDE ========== -->
+    <div style="background: #e0f0f5; border-radius: 50px; padding: 15px 25px; margin-bottom: 30px;">
+        <strong style="font-size: 1.2rem;">📋 SOMMAIRE</strong> &nbsp; 
+        <a href="#bacterio" style="margin:0 10px">1. Bactériologie</a> · 
+        <a href="#virologie" style="margin:0 10px">2. Virologie</a> · 
+        <a href="#mycologie" style="margin:0 10px">3. Mycologie</a> · 
+        <a href="#evaluation" style="margin:0 10px">📝 Évaluation</a>
+    </div>
+
+    <!-- ========== PARTIE I : BACTÉRIOLOGIE ========== -->
+    <h2 id="bacterio">🧫 BACTÉRIOLOGIE GÉNÉRALE</h2>
+    
+    <!-- Morphologie et structure -->
+    <h3>🔬 Morphologie & regroupements</h3>
+    <div class="card-grid">
+        <div class="card"><strong>Formes :</strong> coques (rond), bacilles (bâtonnets), vibrions (virgule), spirilles (ondulations larges), spirochètes (serrées).</div>
+        <div class="card"><strong>Regroupements :</strong> diplocoques, streptocoques, staphylocoques (amas), sarcines, lettres chinoises (diphtérie), ramifications (Actinomyces).</div>
+    </div>
+
+    <h3>🧱 Structure de la cellule procaryote</h3>
+    <ul>
+        <li><strong>Membrane plasmique</strong> : double couche phospholipidique (8 µm) → perméabilité, respiration, synthèse.</li>
+        <li><strong>Paroi</strong> : peptidoglycane ; fonction = protection, forme, pouvoir pathogène, colorabilité (Gram ±, Ziehl). <br>
+            <span class="badge">BGP</span> paroi épaisse, <span class="badge">BGN</span> membrane externe + LPS (lipide A = endotoxine).</li>
+        <li><strong>Structures externes</strong> : capsule (adhérence, anti-phagocytose), flagelles (motilité : monotriche, lophotriche, péritriche), fimbriae (adhésion, biofilms), pili (conjugaison).</li>
+        <li><strong>Endospores</strong> : sporulation (Clostridium, Bacillus) ; résistance (DPA-Ca, SASP).</li>
+    </ul>
+
+    <h3>🧪 Nutrition et milieux de culture</h3>
+    <table>
+        <tr><th>Type de milieu</th><th>Rôle / description</th></tr>
+        <tr><td>Défini (synthétique)</td><td>composition chimique exacte connue</td></tr>
+        <tr><td>Sélectif</td><td>inhibe certaines bactéries, favorise d’autres</td></tr>
+        <tr><td>Différentiel</td><td>indicateur coloré → réactions chimiques identitaires</td></tr>
+        <tr><td>Complexe</td><td>hydrolysats (peptone, caséine...)</td></tr>
+    </table>
+
+    <h3>📈 Croissance bactérienne</h3>
+    <ul>
+        <li><strong>Temps de génération</strong> : Staphylocoque 20 min, BK 20-24h.</li>
+        <li><strong>Courbe en milieu clos</strong> : latence → exponentielle → stationnaire → mort.</li>
+        <li><strong>Facteurs physicochimiques</strong> : température (psychro-, méso-, thermo-), pH (acidophiles, alcaliphiles), pression osmotique (halophiles), oxygène (aérobies, anaérobies, microaérophiles).</li>
+    </ul>
+
+    <h3>🤝 Interactions homme–bactéries</h3>
+    <div class="card-grid">
+        <div class="card"><strong>Flore normale</strong> : peau, bouche, tube digestif... Avantages : protection, vitamines B/K. Inconvénients : réservoir potentiel.</div>
+        <div class="card"><strong>Portes d’entrée</strong> : peau lésée, muqueuses, insectes, mère-enfant, transfusion.</div>
+    </div>
+    <h4>Facteurs de virulence</h4>
+    <ul>
+        <li><strong>Colonisation</strong> : fimbriae, adhésines, biofilm, invasines, flagelles (mobilité), protéases IgA, sidérophores.</li>
+        <li><strong>Lésions tissulaires</strong> :
+            <ul>
+                <li><u>Exotoxines</u> : A-B (ex: toxine diphtérique), cytolytiques (hémolysines, leucocidine), superantigènes (choc).</li>
+                <li><u>Endotoxine</u> (lipide A) : fièvre, choc, leucopénie, nécrose.</li>
+                <li>Enzymes : hyaluronidase, DNase, protéases.</li>
+                <li>Auto-immunité (mimétisme).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>🧼 Contrôle antimicrobien</h3>
+    <table>
+        <tr><th>Méthode</th><th>Exemples / détails</th></tr>
+        <tr><td>Chaleur sèche</td><td>180°C 30 min</td></tr>
+        <tr><td>Chaleur humide (autoclave)</td><td>121°C 15 min (spores détruites)</td></tr>
+        <tr><td>Pasteurisation</td><td>lait, bière</td></tr>
+        <tr><td>Radiations</td><td>UV, γ</td></tr>
+        <tr><td>Filtration</td><td>0,22 µm (bactéries)</td></tr>
+        <tr><td>Stérilisants chimiques</td><td>oxyde d’éthylène, formaldéhyde (froid)</td></tr>
+        <tr><td>Désinfectants</td><td>éthanol, ammonium quaternaire (objets)</td></tr>
+        <tr><td>Antiseptiques</td><td>application sur tissus vivants</td></tr>
+    </table>
+
+    <h3>💊 Antibiotiques & résistance</h3>
+    <ul>
+        <li><strong>Classification</strong> : cible (paroi, protéines, acides nucléiques, membrane) ; bactéricide / bactériostatique.</li>
+        <li><strong>Résistance</strong> : naturelle / acquise. Mécanismes : inactivation enzymatique, modification cible, efflux.</li>
+        <li><strong>Bases génétiques</strong> : mutation chromosomique, plasmides, transposons.</li>
+        <li><strong>CMI / CMB</strong> : diffusion (Kirby-Bauer) ou dilution.</li>
+        <li><strong>Associations</strong> : synergiques / antagonistes. Objectifs : synergie (cotrimoxazole), prévention résistance (TBC), polymicrobiennes, probabilité.</li>
+        <li><strong>10 messages anti-résistance</strong> : vacciner, prévenir transmission, limiter invasifs, modalités adaptées, savoir dire non, bon traitement initial, réévaluer à 48h, traiter infection (pas colonisation), seulement infections bactériennes.</li>
+    </ul>
+
+    <!-- ========== PARTIE II : VIROLOGIE ========== -->
+    <h2 id="virologie">🦠 VIROLOGIE</h2>
+    
+    <h3>Généralités sur les virus</h3>
+    <div class="card-grid">
+        <div class="card"><strong>Structure</strong> : acide nucléique (ADN ou ARN, sb/db, linéaire/circulaire) + capside (icosaédrique, hélicoïdale, complexe) ± enveloppe. Taille 30-400 nm.</div>
+        <div class="card"><strong>Taxinomie</strong> : hôte, type d’AN, symétrie, enveloppe, site multiplication, immunologie.</div>
+    </div>
+    <h4>Multiplication virale</h4>
+    <p>Adsorption → Pénétration (translocation, fusion, endocytose) → Décapsidation → Réplication/transcription → Assemblage → Libération (lyse ou bourgeonnement).</p>
+    <h4>Transmissions et évolutions</h4>
+    <ul>
+        <li><strong>Voies</strong> : air, arthropodes, alimentaire/eau, contact direct, ATNC (prions).</li>
+        <li><strong>Infections</strong> : aiguës (grippe), persistantes (VIH, VHB), latentes (herpès), virus lents (dégénérescences).</li>
+    </ul>
+
+    <h3>Principales familles et virus (Afrique & monde)</h3>
+    <table>
+        <tr><th>Virus / Famille</th><th>Caractéristiques / Maladies</th></tr>
+        <tr><td><strong>Arbovirus</strong> (Bunyaviridae, Flaviviridae, Togaviridae...)</td><td>Fièvre jaune, dengue, Chikungunya, West Nile, fièvre Vallée du Rift ; vecteurs moustiques/tiques.</td></tr>
+        <tr><td><strong>Filovirus</strong> (Ebola, Marburg)</td><td>ARN sb, enveloppé, filament. Ebola (4 souches, Zaire 90% mort.), Marburg (RDC 83% mort.) ; réservoir chauve‑souris.</td></tr>
+        <tr><td><strong>Adénovirus</strong></td><td>ADN db, nu ; pharyngite, conjonctivite ; vaccin.</td></tr>
+        <tr><td><strong>Grippe (Orthomyxoviridae)</strong></td><td>Types A,B,C ; HA (H1-16) et NA (N1-9) ; variations antigéniques ; pandémies (H5N1, H1N1).</td></tr>
+        <tr><td><strong>Rougeole (Paramyxoviridae)</strong></td><td>ARN sb, enveloppé ; très contagieux ; immunité durable.</td></tr>
+        <tr><td><strong>Oreillons (Paramyxovirus)</strong></td><td>Parotidite, orchite, méningite ; prévention vaccinale.</td></tr>
+        <tr><td><strong>Entérovirus (Picornavirus)</strong></td><td>Poliovirus (3 types, paralysie), Coxsackie, Echo, entérovirus 70/71 ; transmission féco‑orale.</td></tr>
+        <tr><td><strong>Herpesviridae</strong></td><td>HSV1/2, VZV, CMV, EBV, HHV6-8 ; latence, récurrences. HSV1 (gingivostomatite), HSV2 (génital), VZV (varicelle/zona), CMV (maladie à inclusions), EBV (MNI, Burkitt).</td></tr>
+        <tr><td><strong>Rage (Rhabdoviridae)</strong></td><td>Zoonose (chien, chauve‑souris) ; virus en forme d’obus ; prévention vaccinale.</td></tr>
+        <tr><td><strong>Variole (Poxvirus)</strong></td><td>Éradiquée (1979) ; monkeypox (Afrique).</td></tr>
+        <tr><td><strong>Hépatites virales</strong></td><td>A (Picornavirus, oro‑fécale) ; B (Hepadnavirus, ADN, transmission sang/sexe/mère) ; C (Flavivirus, ARN, chronicité) ; D (défectif, avec VHB) ; E (Calicivirus, hydrique, gravide) ; G (Flavivirus, post‑transfusion).</td></tr>
+        <tr><td><strong>Papillomavirus (HPV)</strong></td><td>ADN db circulaire ; >120 types, verrues, condylomes, cancers (col utérin : 16,18,31,33).</td></tr>
+        <tr><td><strong>Rétrovirus (VIH, HTLV)</strong></td><td>ARN, enveloppé, transcriptase inverse. VIH1/2, SIDA ; HTLV1 (leucémie).</td></tr>
+    </table>
+
+    <!-- VIH détaillé -->
+    <div class="small-note">
+        <strong>🔬 VIH :</strong> gp120 (fixation CD4) et gp40 (fusion). Co‑récepteurs CCR5/CXCR4. Cycle : transcription inverse, intégration, bourgeonnement. Destruction LT4 → immunodépression.
+    </div>
+
+    <!-- ========== PARTIE III : MYCOLOGIE ========== -->
+    <h2 id="mycologie">🍄 MYCOLOGIE</h2>
+    <h3>Généralités sur les champignons</h3>
+    <ul>
+        <li><strong>Eucaryotes</strong> : levures (unicellulaires), filamenteux (hyphes septés ou non, mycélium), dimorphiques (levure in vivo, filament in vitro).</li>
+        <li><strong>Nutrition</strong> : hétérotrophes, aérobies, croissance 20-25°C (pathogènes 37°C).</li>
+        <li><strong>Reproduction</strong> asexuée (conidies, sporangiospores, arthrospores, blastospores, chlamydospores) et sexuée (zygospores, ascospores, basidiospores).</li>
+    </ul>
+
+    <h3>Mycoses d’intérêt médical (tropical)</h3>
+    <table>
+        <tr><th>Type</th><th>Maladie / Agent</th><th>Éléments diagnostiques</th></tr>
+        <tr><td rowspan="4"><strong>Superficielles</strong></td><td>Dermatophytoses (Microsporum, Trichophyton, Epidermophyton) : teignes, pied d’athlète, onyxis.</td><td>Squames/KOH, culture Sabouraud.</td></tr>
+        <tr><td>Malasseziose (Pityriasis versicolor) – Malassezia furfur</td><td>Macules hypochromiques, spores “grappes” + filaments.</td></tr>
+        <tr><td>Tinea nigra (Hortaea werneckii)</td><td>Tache brune/noire, filaments bruns.</td></tr>
+        <tr><td>Piedra (noire: Piedraia hortae ; blanche: Trichosporon beigelii)</td><td>Nodules sur cheveux/polis.</td></tr>
+        <tr><td rowspan="5"><strong>Sous-cutanées</strong></td><td>Mycétomes (eumycétomes : Madurella, grains noirs/blancs)</td><td>Pied de Madura, fistules, grains (filaments épais).</td></tr>
+        <tr><td>Chromoblastomycose (Fonsecaea, Phialophora...)</td><td>Lésions verruqueuses, nodules ; médiator corps fumagoïdes.</td></tr>
+        <tr><td>Basidiobolomycose (Basidiobolus ranarum)</td><td>Placard dermo‑hypodermique.</td></tr>
+        <tr><td>Conidiobolomycose (Conidiobolus coronatus)</td><td>Rhinofaciale (groin de tapir).</td></tr>
+        <tr><td>Sporotrichose (Sporothrix schenckii)</td><td>Forme lymphangitique “en chapelet”.</td></tr>
+        <tr><td rowspan="5"><strong>Profondes / systémiques</strong></td><td>Candidoses (Candida albicans) : muguet, onyxis, septicémies.</td><td>Levures + pseudo‑filaments.</td></tr>
+        <tr><td>Cryptococcose (Cryptococcus neoformans)</td><td>Levure encapsulée (encre de Chine), méningo‑encéphalite (SIDA).</td></tr>
+        <tr><td>Pneumocystose (Pneumocystis jirovecii)</td><td>CD4<200/mm³, LBA coloration spéciale.</td></tr>
+        <tr><td>Histoplasmose (H. capsulatum / H. duboisii)</td><td>Formes pulmonaire ou disséminée ; levures intracellulaires.</td></tr>
+        <tr><td>Aspergillose (Aspergillus fumigatus, flavus...)</td><td>Aspergillome, allergique ; aflatoxines (hépatocarcinome).</td></tr>
+    </table>
+
+    <!-- ========== PARTIE ÉVALUATION ========== -->
+    <div id="evaluation" class="eval-box">
+        <h2 style="border:none; color:#154c5e;">📝 Évaluation des connaissances</h2>
+        <p style="font-size:1.1rem;">QCM, questions courtes et association pour s’auto‑tester.</p>
+
+        <div class="qcm">
+            <div class="question">1️⃣ Parmi les structures suivantes, lesquelles sont des facteurs d’adhésion bactérienne ?</div>
+            <ul class="options">
+                <li>A. Fimbriae</li>
+                <li>B. Capsule</li>
+                <li>C. Pili sexuels</li>
+                <li>D. Endospores</li>
+            </ul>
+            <p><strong>✅ Réponses : A, B, C</strong> (les fimbriae et pili adhèrent, la capsule adhère aussi ; endospore = résistance).</p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">2️⃣ Concernant le virus de la grippe, quelle(s) proposition(s) est (sont) exacte(s) ?</div>
+            <ul class="options">
+                <li>A. C’est un virus à ARN segmenté.</li>
+                <li>B. Les hémagglutinines (HA) permettent la libération des virions.</li>
+                <li>C. Les sous‑types sont déterminés par HA et NA.</li>
+                <li>D. Les porcs peuvent être un hôte intermédiaire pour des réassortiments.</li>
+            </ul>
+            <p><strong>✅ Réponses : A, C, D</strong> (B est faux : NA neuraminidase libère, HA attache).</p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">3️⃣ Quelle mycose profonde est associée à une levure encapsulée visible à l’encre de Chine ?</div>
+            <ul class="options">
+                <li>A. Candidose</li>
+                <li>B. Cryptococcose</li>
+                <li>C. Aspergillose</li>
+                <li>D. Histoplasmose</li>
+            </ul>
+            <p><strong>✅ Réponse : B</strong> (Cryptococcus neoformans).</p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">4️⃣ Associez chaque antibiotique à sa cible principale :</div>
+            <ol style="margin-bottom: 10px;">
+                <li>Bêta‑lactamines</li>
+                <li>Tétracyclines</li>
+                <li>Quinolones</li>
+                <li>Polymyxines</li>
+            </ol>
+            <ul style="list-style:none;">
+                <li>a) Paroi (peptidoglycane)</li>
+                <li>b) Membrane plasmique</li>
+                <li>c) Synthèse protéique (ribosome 30S)</li>
+                <li>d) ADN gyrase / topo-isomérases</li>
+            </ul>
+            <p><strong>✅ Réponses : 1‑a, 2‑c, 3‑d, 4‑b.</strong></p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">5️⃣ Vrai ou faux ? L’endotoxine est une exotoxine puissante libérée par les bactéries Gram positif.</div>
+            <ul class="options">
+                <li>A. Vrai</li>
+                <li>B. Faux</li>
+            </ul>
+            <p><strong>✅ B. Faux</strong> : l’endotoxine = lipide A des BGN, libérée à la lyse.</p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">6️⃣ Citez trois modes de transmission des virus (exemples).</div>
+            <p><strong>🔹 Réponse :</strong> aérienne (grippe, rougeole), vectorielle (arbovirus, fièvre jaune), contact direct (VIH, herpès, Ebola).</p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">7️⃣ Quels sont les deux types de résistance aux antibiotiques ? Donnez une base génétique pour la résistance acquise.</div>
+            <p><strong>🔹 Résistance naturelle et acquise.</strong> Acquise : mutation chromosomique, plasmide, transposon.</p>
+        </div>
+
+        <div class="qcm">
+            <div class="question">8️⃣ Qu’est‑ce qu’un temps de génération ? Pourquoi est‑il plus long pour Mycobacterium tuberculosis ?</div>
+            <p><strong>🔹 Temps pour qu’une cellule devienne 2 cellules.</strong> BK a un métabolisme lent (20‑24h).</p>
+        </div>
+
+        <p style="margin-top:25px;">📌 <em>Pour une évaluation complète, refaire les schémas (paroi BGP/BGN, cycle viral, cycle du VIH, sporulation).</em></p>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        Fiche de révision générée depuis le cours de Microbiologie générale (Pr C. Kayembe) · Toutes les diapos synthétisées · Août 2025
+    </footer>
+</div>
+</body>
+</html>
