@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microbiologie médicale · Cours complet + évaluations interactives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background: #f5fafd;
+            color: #022b3a;
+            padding: 25px 20px;
+            line-height: 1.6;
+        }
+        .course-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 36px;
+            box-shadow: 0 25px 45px -15px rgba(0,40,60,0.25);
+            padding: 30px 35px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(145deg, #0f4c5c, #0b3b47);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            border-left: 14px solid #1f7a8c;
+            padding-left: 22px;
+        }
+        .author-note {
+            color: #2f6e7f;
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            font-style: italic;
+            border-bottom: 2px solid #bdd8e8;
+            padding-bottom: 16px;
+        }
+        .toc {
+            background: #ebf6fa;
+            border-radius: 60px;
+            padding: 18px 30px;
+            margin-bottom: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-weight: 600;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #115261;
+            font-size: 1.2rem;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .toc a:hover {
+            border-bottom-color: #1f7a8c;
+        }
+        h2 {
+            font-size: 2.2rem;
+            margin: 45px 0 20px 0;
+            color: #0d5265;
+            border-bottom: 4px solid #9ac7d9;
+            padding-bottom: 6px;
+            background: linear-gradient(to right, #dcf0f7, transparent);
+            padding-left: 12px;
+        }
+        h3 {
+            font-size: 1.7rem;
+            margin: 30px 0 15px 0;
+            color: #166979;
+            background: #e1f1f7;
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        h4 {
+            font-size: 1.25rem;
+            margin: 20px 0 10px;
+            color: #1b5e70;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin: 18px 0 25px;
+        }
+        .card {
+            background: #f6fbfe;
+            border: 1px solid #cbe0ea;
+            border-radius: 24px;
+            padding: 18px 20px;
+            transition: 0.15s;
+        }
+        .card strong {
+            color: #0d5b6e;
+        }
+        ul, ol {
+            padding-left: 28px;
+            margin: 10px 0 18px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 12px rgba(0,30,50,0.07);
+            margin: 20px 0 30px;
+        }
+        th {
+            background: #1b6f84;
+            color: white;
+            padding: 12px 10px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        td {
+            background: #f3fafd;
+            padding: 10px 12px;
+            border-bottom: 1px solid #c2dae7;
+        }
+        .badge {
+            background: #267c8b;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 8px;
+            display: inline-block;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #cde2ed, transparent);
+            margin: 40px 0 20px;
+        }
+
+        /* ========== ÉVALUATION ========== */
+        .eval-section {
+            background: #ecf6fc;
+            border-radius: 40px;
+            padding: 30px 35px;
+            margin: 50px 0 30px;
+            border: 3px solid #7fb6cc;
+        }
+        .eval-section h3 {
+            background: #217a8e;
+            color: white;
+            margin-top: 0;
+            padding: 10px 30px;
+            font-size: 1.9rem;
+        }
+        .question-item {
+            background: white;
+            border-radius: 30px;
+            padding: 18px 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 12px rgba(0,40,50,0.1);
+        }
+        .question-text {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #023e4e;
+        }
+        .options-list {
+            list-style-type: upper-latin;
+            padding-left: 30px;
+            margin: 10px 0 10px;
+        }
+        .btn-answer {
+            background: #1f7a8c;
+            border: none;
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 22px;
+            border-radius: 40px;
+            cursor: pointer;
+            margin: 10px 0 5px;
+            transition: 0.15s;
+            border: 1px solid #166979;
+        }
+        .btn-answer:hover {
+            background: #0f5e6f;
+        }
+        .hidden-answer {
+            display: none;
+            background: #def2f9;
+            padding: 15px 22px;
+            border-radius: 26px;
+            margin-top: 15px;
+            border-left: 8px solid #1f7a8c;
+            font-size: 1.05rem;
+        }
+        .correction-label {
+            font-weight: 700;
+            color: #003542;
+        }
+        footer {
+            margin-top: 50px;
+            color: #4a707f;
+            text-align: right;
+            border-top: 2px solid #bcd8e8;
+            padding-top: 22px;
+            font-size: 1rem;
+        }
+        .small-note {
+            background: #e7f3f9;
+            border-radius: 20px;
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="course-container">
+    <h1>🦠 MICROBIOLOGIE MÉDICALE</h1>
+    <div class="author-note">Pr Dr Charles KAYEMBE — Année académique 2018-2019 — Synthèse intégrale</div>
+
+    <div class="toc">
+        <a href="index.html">Version 1</a>
+        <a href="#bacterio">🧫 Bactériologie</a>
+        <a href="#virologie">🦠 Virologie</a>
+        <a href="#mycologie">🍄 Mycologie</a>
+        <a href="#eval-bacterio">📝 Éval. bactério</a>
+        <a href="#eval-viro">📝 Éval. viro</a>
+        <a href="#eval-mycologie">📝 Éval. myco</a>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- PARTIE I : BACTÉRIOLOGIE (pages 1-47)                            -->
+    <!-- ================================================================= -->
+    <section id="bacterio">
+        <h2>🧫 1. BACTÉRIOLOGIE GÉNÉRALE</h2>
+        
+        <h3>🔬 Morphologie et structure</h3>
+        <div class="card-grid">
+            <div class="card"><strong>Formes :</strong> coques (ronds), bacilles (bâtonnets), vibrions (virgule), spirilles (ondulations larges), spirochètes (ondulations serrées).</div>
+            <div class="card"><strong>Regroupements :</strong> diplocoques, streptocoques (chaînettes), staphylocoques (amas), sarcines (cubes), lettres chinoises (diphtérie), ramifications (Actinomyces).</div>
+        </div>
+
+        <h4>Paroi bactérienne & structures</h4>
+        <ul>
+            <li><strong>Peptidoglycane</strong> = constituant principal (acide muranique).</li>
+            <li><strong>BGP</strong> : paroi épaisse, retiennent le Gram.</li>
+            <li><strong>BGN</strong> : membrane externe + LPS (lipide A = endotoxine, polysaccharide O antigénique).</li>
+            <li><strong>Membrane plasmique</strong> : perméabilité sélective, respiration, synthèse.</li>
+            <li><strong>Structures externes</strong> : capsule (virulence, adhérence), flagelles (motilité : monotriche, lophotriche, péritriche), fimbriae (adhésion, biofilms), pili (conjugaison).</li>
+            <li><strong>Endospores</strong> : sporulation (Bacillus, Clostridium) ; résistance grâce au DPA-Ca et SASP ; détruites à 121°C 15 min.</li>
+        </ul>
+
+        <h4>🌡️ Croissance et physiologie</h4>
+        <table>
+            <tr><th>Paramètre</th><th>Détails</th></tr>
+            <tr><td>Température</td><td>Psychrophiles (&lt;20°C), mésophiles (37°C), thermophiles (&gt;50°C)</td></tr>
+            <tr><td>pH</td><td>Neutrophiles (5-9), acidophiles (≤2), alcaliphiles (~10)</td></tr>
+            <tr><td>Oxygène</td><td>Aérobies stricts, anaérobies stricts, anaérobies facultatifs, microaérophiles</td></tr>
+            <tr><td>Pression osmotique</td><td>Halophiles (NaCl), osmophiles (sucres)</td></tr>
+        </table>
+
+        <h4>🧪 Milieux de culture</h4>
+        <ul>
+            <li><strong>Défini (synthétique)</strong> : composition exacte.</li>
+            <li><strong>Complexe</strong> : peptones, extraits (caséine, soja).</li>
+            <li><strong>Sélectif</strong> : inhibe certaines bactéries.</li>
+            <li><strong>Différentiel</strong> : indicateur coloré (ex: gélose au sang).</li>
+        </ul>
+
+        <h4>🤒 Interactions hôte–bactéries</h4>
+        <ul>
+            <li><strong>Flore normale</strong> : peau, tube digestif, vagin… Rôle protecteur (effet barrière), synthèse vitamines B/K.</li>
+            <li><strong>Portes d’entrée</strong> : peau lésée, muqueuses, piqûres, transfusion, mère-enfant.</li>
+            <li><strong>Facteurs de virulence</strong> : 
+                <ul>
+                    <li><u>Colonisation</u> : fimbriae, adhésines, biofilms, sidérophores, protéases IgA.</li>
+                    <li><u>Lésions</u> : exotoxines (A-B, cytolytiques, superantigènes), endotoxine (lipide A), enzymes hydrolytiques (hyaluronidase), auto-immunité.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>🧼 Contrôle antimicrobien</h4>
+        <ul>
+            <li><strong>Physique</strong> : chaleur sèche (180°C 30 min), chaleur humide (autoclave 121°C 15 min), filtration 0,22 µm, UV, γ.</li>
+            <li><strong>Chimique</strong> : stérilisants gazeux (oxyde d’éthylène), désinfectants (éthanol, ammonium), antiseptiques.</li>
+        </ul>
+
+        <h4>💊 Antibiotiques et résistance</h4>
+        <ul>
+            <li><strong>Classification</strong> : cible (paroi, protéines, acides nucléiques, membrane) ; bactéricide / bactériostatique.</li>
+            <li><strong>Résistance</strong> : naturelle/acquise ; mécanismes : enzymes inactivatrices (β-lactamases), modification cible, efflux.</li>
+            <li><strong>Support génétique</strong> : mutations, plasmides, transposons.</li>
+            <li><strong>CMI / CMB</strong> : diffusion (Kirby-Bauer) ou dilution.</li>
+            <li><strong>Prévention de l’antibiorésistance</strong> (10 messages) : vaccination, éviter transmission croisée, limiter dispositifs invasifs, réévaluer à 48h, traiter l’infection (pas la colonisation).</li>
+        </ul>
+    </section>
+
+    <!-- ÉVALUATION BACTÉRIOLOGIE (réponses cachées) -->
+    <section id="eval-bacterio" class="eval-section">
+        <h3>📝 Évaluation – Bactériologie</h3>
+
+        <div class="question-item">
+            <div class="question-text">1️⃣ Quels sont les trois grands types de formes bactériennes ? Donnez un exemple de regroupement pour les coques.</div>
+            <button class="btn-answer" onclick="toggleAnswer('b1')">Afficher la réponse</button>
+            <div id="b1" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Coques (ronds), bacilles (bâtonnets), formes spiralées (vibrions, spirilles). Ex regroupement : staphylocoques (amas), streptocoques (chaînettes), diplocoques (paires).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">2️⃣ Citez deux rôles de la capsule bactérienne et un rôle des fimbriae.</div>
+            <button class="btn-answer" onclick="toggleAnswer('b2')">Afficher la réponse</button>
+            <div id="b2" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Capsule : adhérence, résistance à la phagocytose. Fimbriae : adhésion aux cellules de l’hôte, formation de biofilms.</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">3️⃣ Quelle est la différence fondamentale entre l’endotoxine et une exotoxine A-B ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('b3')">Afficher la réponse</button>
+            <div id="b3" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Endotoxine = lipide A du LPS des BGN, libéré à la lyse, provoque fièvre, choc. Exotoxine A-B = protéine sécrétée : sous‑unité B se lie à la cellule, sous‑unité A est toxique (ex: toxine diphtérique).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">4️⃣ Qu’est‑ce qu’un temps de génération ? Donnez un exemple.</div>
+            <button class="btn-answer" onclick="toggleAnswer('b4')">Afficher la réponse</button>
+            <div id="b4" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Temps nécessaire pour qu’une cellule devienne deux cellules. Ex: Staphylococcus = 20 min, Mycobacterium tuberculosis = 20-24 h.</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">5️⃣ Décrivez brièvement les quatre phases de la courbe de croissance en milieu clos.</div>
+            <button class="btn-answer" onclick="toggleAnswer('b5')">Afficher la réponse</button>
+            <div id="b5" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> 1. Latence (adaptation) ; 2. Exponentielle (division maximale) ; 3. Stationnaire (équilibre) ; 4. Mort (déclin).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">6️⃣ Quels sont les deux facteurs de résistance des endospores ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('b6')">Afficher la réponse</button>
+            <div id="b6" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Complexe acide dipicolinique‑Ca (déshydratation) et protéines SASP (protègent l’ADN).</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ================================================================= -->
+    <!-- PARTIE II : VIROLOGIE (pages 48-94)                              -->
+    <!-- ================================================================= -->
+    <section id="virologie">
+        <h2>🦠 2. VIROLOGIE</h2>
+
+        <h3>Généralités structurales</h3>
+        <ul>
+            <li><strong>Virus</strong> : acellulaires, un seul type d’acide nucléique (ADN ou ARN), sb ou db, linéaire/circulaire, parfois segmenté.</li>
+            <li><strong>Capside</strong> : icosaédrique, hélicoïdale, complexe. Nucléocapside = acide nucléique + capside.</li>
+            <li><strong>Enveloppe</strong> : bicouche lipidique (provenant de l’hôte) + glycoprotéines virales (ex: gp120 du VIH). Sensible aux solvants.</li>
+            <li><strong>Classification</strong> : type d’AN, présence d’enveloppe, symétrie, hôte, mode transmission.</li>
+        </ul>
+
+        <h4>Cycle viral type</h4>
+        <p>Adsorption → Pénétration (fusion, endocytose, translocation) → Décapsidation → Réplication/transcription → Assemblage → Libération (lyse ou bourgeonnement).</p>
+
+        <h4>Principaux virus pathogènes (Afrique & monde)</h4>
+        <table>
+            <tr><th>Famille / Virus</th><th>Maladies / particularités</th></tr>
+            <tr><td>Arbovirus (Flavivirus, Togavirus...)</td><td>Fièvre jaune, dengue, chikungunya, West Nile ; vecteurs moustiques/tiques.</td></tr>
+            <tr><td>Filovirus (Ebola, Marburg)</td><td>Fièvres hémorragiques, réservoir chauve‑souris, transmission par liquides biologiques.</td></tr>
+            <tr><td>Orthomyxoviridae (grippe)</td><td>Types A, B, C ; variations HA (H1-16) et NA (N1-9) ; réassortiment.</td></tr>
+            <tr><td>Paramyxoviridae (rougeole, oreillons)</td><td>Rougeole : contagieuse, prévention vaccinale ; oreillons : parotidite, orchite.</td></tr>
+            <tr><td>Herpesviridae</td><td>HSV1/2 (herpès), VZV (varicelle/zona), CMV, EBV (MNI), HHV8 (sarcome Kaposi). Latence.</td></tr>
+            <tr><td>Hepadnaviridae (VHB)</td><td>Hépatite B, ADN, transmission sanguine/sexuelle/mère‑enfant, chronicité, cirrhose, CHC.</td></tr>
+            <tr><td>Flaviviridae (VHC)</td><td>Hépatite C, ARN, chronicité fréquente, cirrhose, CHC.</td></tr>
+            <tr><td>Picornaviridae (entérovirus, VHA)</td><td>Poliovirus (paralysie), Coxsackie, Echo, VHA (hépatite aiguë, oro‑fécale).</td></tr>
+            <tr><td>Rétroviridae (VIH, HTLV)</td><td>VIH1/2 (SIDA), transcriptase inverse, destruction LT4, infections opportunistes.</td></tr>
+            <tr><td>Papillomavirus (HPV)</td><td>Verrues, condylomes, cancers (col utérin : types 16,18,31,33).</td></tr>
+            <tr><td>Rhabdoviridae (rage)</td><td>Zoonose, transmission par morsure, prévention vaccinale.</td></tr>
+        </table>
+
+        <div class="small-note">
+            <strong>🔬 Détail VIH :</strong> gp120 se fixe sur CD4, co‑récepteurs CCR5/CXCR4 ; enzyme transcriptase inverse ; provirus intégré ; destruction LT4 → sida.
+        </div>
+    </section>
+
+    <!-- ÉVALUATION VIROLOGIE -->
+    <section id="eval-viro" class="eval-section">
+        <h3>📝 Évaluation – Virologie</h3>
+
+        <div class="question-item">
+            <div class="question-text">1️⃣ Quels sont les deux types de capside virale ? Donnez un exemple de virus pour chacun.</div>
+            <button class="btn-answer" onclick="toggleAnswer('v1')">Afficher la réponse</button>
+            <div id="v1" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Icosaédrique (ex: adénovirus, HPV) ; hélicoïdale (ex: virus de la rougeole, rage).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">2️⃣ Qu’est‑ce qu’une infection virale latente ? Citez un virus concerné.</div>
+            <button class="btn-answer" onclick="toggleAnswer('v2')">Afficher la réponse</button>
+            <div id="v2" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Le virus persiste dans l’hôte sans se répliquer, et peut se réactiver. Ex: Herpes simplex (HSV), VZV.</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">3️⃣ Quelle est la particularité du virus de l’hépatite D (Delta) ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('v3')">Afficher la réponse</button>
+            <div id="v3" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Virus défectif, nécessite le VHB pour sa réplication (utilise l’enveloppe HBs). Co‑infection ou surinfection.</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">4️⃣ Décrivez brièvement le rôle de la neuraminidase (NA) dans le cycle du virus grippal.</div>
+            <button class="btn-answer" onclick="toggleAnswer('v4')">Afficher la réponse</button>
+            <div id="v4" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> La neuraminidase permet le bourgeonnement des nouveaux virions et lyse le mucus bronchique facilitant la propagation.</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">5️⃣ Quels sont les trois grands modes de transmission des virus ? Donnez un exemple pour chacun.</div>
+            <button class="btn-answer" onclick="toggleAnswer('v5')">Afficher la réponse</button>
+            <div id="v5" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Aérien (grippe, rougeole) ; vectoriel (arbovirus : fièvre jaune) ; contact direct (VIH, Ebola, herpès).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">6️⃣ Citez deux enzymes clés présentes dans certains virions.</div>
+            <button class="btn-answer" onclick="toggleAnswer('v6')">Afficher la réponse</button>
+            <div id="v6" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Transcriptase inverse (rétrovirus), neuraminidase (grippe), ADN polymérase (certains virus ADN).</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ================================================================= -->
+    <!-- PARTIE III : MYCOLOGIE (pages 95-120)                            -->
+    <!-- ================================================================= -->
+    <section id="mycologie">
+        <h2>🍄 3. MYCOLOGIE</h2>
+
+        <h3>Caractères généraux des champignons</h3>
+        <ul>
+            <li><strong>Eucaryotes</strong> : levures (unicellulaires) ou filamenteux (hyphes avec/sans septa, mycélium).</li>
+            <li><strong>Dimorphiques</strong> : levure in vivo, filament in vitro (ex: Histoplasma, Sporothrix).</li>
+            <li><strong>Nutrition</strong> : hétérotrophes, aérobies, température 20-25°C (pathogènes 37°C).</li>
+            <li><strong>Reproduction asexuée</strong> : conidies (blastospores, arthrospores, chlamydospores), sporangiospores.</li>
+        </ul>
+
+        <h4>Mycoses d’intérêt médical (tropical)</h4>
+        <table>
+            <tr><th>Type</th><th>Maladie / Agent</th><th>Éléments clés</th></tr>
+            <tr><td><strong>Superficielles</strong></td><td>Dermatophytoses (Microsporum, Trichophyton, Epidermophyton), Pityriasis versicolor (Malassezia), Tinea nigra, Piedra.</td><td>Kératinophiles, lésions peau/phanères ; diagnostic par KOH, culture Sabouraud.</td></tr>
+            <tr><td><strong>Sous-cutanées</strong></td><td>Mycétomes (eumycétomes : Madurella), Chromoblastomycose, Sporotrichose, Basidiobolomycose, Conidiobolomycose.</td><td>Inoculation traumatique ; grains, nodules, “chapelet” lymphatique.</td></tr>
+            <tr><td><strong>Profondes</strong></td><td>Candidoses (Candida albicans), Cryptococcose (Cryptococcus neoformans), Pneumocystose (P. jirovecii), Histoplasmose (H. capsulatum/duboisii), Aspergillose (Aspergillus spp.).</td><td>Immunodéprimés ; capsule (cryptocoque) ; aflatoxines (Aspergillus flavus) ; levures intracellulaires (Histoplasma).</td></tr>
+        </table>
+        <div class="small-note">
+            <strong>Diagnostic mycologique :</strong> examen direct (KOH, encre de Chine), culture sur Sabouraud, histopathologie, sérologie.
+        </div>
+    </section>
+
+    <!-- ÉVALUATION MYCOLOGIE -->
+    <section id="eval-mycologie" class="eval-section">
+        <h3>📝 Évaluation – Mycologie</h3>
+
+        <div class="question-item">
+            <div class="question-text">1️⃣ Quelle est la différence entre une levure et un champignon filamenteux ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('m1')">Afficher la réponse</button>
+            <div id="m1" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Levure = unicellulaire (ex: Candida), se reproduit par bourgeonnement. Filamenteux = formé d’hyphes (filaments) pouvant former un mycélium (ex: Aspergillus).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">2️⃣ Quel est le principal facteur favorisant les candidoses profondes ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('m2')">Afficher la réponse</button>
+            <div id="m2" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Immunodépression (Sida, chimiothérapie, corticothérapie), antibiothérapie à large spectre, cathéters.</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">3️⃣ Quel examen simple permet de visualiser la capsule de Cryptococcus neoformans ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('m3')">Afficher la réponse</button>
+            <div id="m3" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Examen direct à l’encre de Chine (la capsule apparaît en halo clair).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">4️⃣ Citez deux champignons dimorphes et leur répartition géographique.</div>
+            <button class="btn-answer" onclick="toggleAnswer('m4')">Afficher la réponse</button>
+            <div id="m4" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Histoplasma capsulatum (Amérique, Afrique), Sporothrix schenckii (cosmopolite), Histoplasma duboisii (Afrique).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">5️⃣ Quel champignon produit des aflatoxines et quelle est leur conséquence ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('m5')">Afficher la réponse</button>
+            <div id="m5" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Aspergillus flavus ; aflatoxines → toxiques et cancérigènes (hépatocarcinome).</div>
+        </div>
+
+        <div class="question-item">
+            <div class="question-text">6️⃣ Comment appelle‑t‑on l’infection due à Malassezia furfur ? Quelle en est l’aspect clinique ?</div>
+            <button class="btn-answer" onclick="toggleAnswer('m6')">Afficher la réponse</button>
+            <div id="m6" class="hidden-answer"><span class="correction-label">✔ Réponse :</span> Pityriasis versicolor (ou malasseziose). Macules hypochromiques (dépigmentées) siégeant sur le thorax, cou, épaules, recouvertes de squames fines.</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Évaluation transversale bonus (facultative) -->
+    <div style="background: #dff0f5; border-radius: 30px; padding: 25px; margin: 40px 0 20px;">
+        <h3 style="margin-top: 0;">🧪 Question transversale (synthèse)</h3>
+        <div class="question-item" style="background: #ffffff;">
+            <div class="question-text">Comparez brièvement la paroi des bactéries à Gram positif, des bactéries à Gram négatif et la paroi des champignons.</div>
+            <button class="btn-answer" onclick="toggleAnswer('t1')">Afficher la réponse</button>
+            <div id="t1" class="hidden-answer">
+                <span class="correction-label">✔ Réponse :</span> BGP : paroi épaisse de peptidoglycane. BGN : peptidoglycane fin + membrane externe avec LPS. Champignons : paroi épaisse à base de chitine, glucanes ; structure eucaryote.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Fiche de révision exhaustive – Microbiologie médicale (Pr Kayembe) – Toutes les réponses sont cachées pour auto‑évaluation.  
+        Cliquez sur les boutons pour afficher les corrections.
+    </footer>
+</div>
+
+<script>
+    function toggleAnswer(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
