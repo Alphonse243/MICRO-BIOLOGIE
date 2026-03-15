@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiche de révision : Virologie & Mycologie</title>
+    <title>Fiche de révision : Virologie & Mycologie (enrichie)</title>
     <style>
         * {
             margin: 0;
@@ -23,7 +23,7 @@
 
         /* Arborescence (menu latéral) */
         .sidebar {
-            width: 280px;
+            width: 300px;
             background-color: #1e3c4f;
             color: #ecf0f1;
             padding: 20px 0;
@@ -90,7 +90,7 @@
         .main-content {
             flex: 1;
             padding: 30px 40px;
-            max-width: calc(100% - 280px);
+            max-width: calc(100% - 300px);
             overflow-y: auto;
         }
 
@@ -205,6 +205,15 @@
             margin: 20px 0;
         }
 
+        .clinical-img-desc {
+            background-color: #f0f7fc;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 15px 0;
+            border-left: 4px solid #1e3c4f;
+            font-style: italic;
+        }
+
         footer {
             margin-top: 40px;
             text-align: center;
@@ -251,7 +260,7 @@
             <li><a href="#poxvirus" class="sub-item2">Poxvirus</a></li>
             <li><a href="#hepatites" class="sub-item2">Hépatites</a></li>
             <li><a href="#hpv" class="sub-item2">Papillomavirus</a></li>
-            <li><a href="#retrovirus" class="sub-item2">Rétrovirus (VIH)</a></li>
+            <li><a href="#retrovirus" class="sub-item2">Rétrovirus (VIH, HTLV)</a></li>
 
             <li><a href="#mycologie" class="section-title" style="margin-top:20px;">🍄 MYCOLOGIE</a></li>
             <li><a href="#generalites-myc" class="sub-item">1. Généralités</a></li>
@@ -278,7 +287,7 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="main-content">
-        <h1>📘 FICHE DE RÉVISION : VIROLOGIE & MYCOLOGIE</h1>
+        <h1>📘 FICHE DE RÉVISION : VIROLOGIE & MYCOLOGIE (enrichie)</h1>
 
         <!-- ==================== VIROLOGIE ==================== -->
         <section id="virologie">
@@ -345,131 +354,138 @@
                 <table>
                     <tr><th>Mode</th><th>Exemples</th></tr>
                     <tr><td><strong>Air</strong> (voies respiratoires)</td><td>Varicelle, grippe, rougeole, oreillons, rubéole</td></tr>
-                    <tr><td><strong>Arthropodes</strong> (arbovirus)</td><td>Fièvre jaune, dengue, chikungunya</td></tr>
+                    <tr><td><strong>Arthropodes</strong> (arbovirus)</td><td>Fièvre jaune, dengue, chikungunya, fièvre de la Vallée du Rift, West Nile</td></tr>
                     <tr><td><strong>Aliments/eau</strong></td><td>Gastro-entérites, hépatite A/E, poliomyélite</td></tr>
-                    <tr><td><strong>Contact direct</strong></td><td>Sida, herpès, mononucléose, rage, hépatites B/C, Ebola</td></tr>
+                    <tr><td><strong>Contact direct</strong></td><td>Sida, herpès, mononucléose, rage, hépatites B/C, Ebola, Marburg</td></tr>
                     <tr><td><strong>Agents non conventionnels</strong> (prions)</td><td>Creutzfeldt-Jacob, Kuru</td></tr>
                 </table>
                 <table>
                     <tr><th>Type d'infection</th><th>Caractéristiques</th><th>Exemples</th></tr>
-                    <tr><td>Aiguë</td><td>Apparition rapide, durée brève</td><td>Grippe, hépatite A, Ebola</td></tr>
-                    <tr><td>Persistante/chronique</td><td>Porteur asymptomatique, dissémination</td><td>VIH, VHB, VHC</td></tr>
+                    <tr><td>Aiguë</td><td>Apparition rapide, durée brève</td><td>Grippe, hépatite A, Ebola (phase aiguë)</td></tr>
+                    <tr><td>Persistante/chronique</td><td>Porteur asymptomatique, dissémination</td><td>VIH, VHB, VHC, herpès (latence)</td></tr>
                 </table>
             </article>
 
             <article id="principaux-virus" class="card">
                 <h3>4. Principaux virus pathogènes humains</h3>
                 
-                <h4 id="arbovirus">Arbovirus</h4>
+                <h4 id="arbovirus">Arbovirus (Afrique)</h4>
                 <table>
                     <tr><th>Virus</th><th>Famille</th><th>Transmission</th><th>Syndrome</th></tr>
                     <tr><td>Fièvre jaune</td><td>Flaviviridae</td><td>Moustique <em>Aedes</em></td><td>Fièvre hémorragique</td></tr>
                     <tr><td>Dengue</td><td>Flaviviridae</td><td><em>Aedes</em></td><td>Algo-fébrile ou hémorragique</td></tr>
-                    <tr><td>Chikungunya</td><td>Togaviridae</td><td>Moustique</td><td>Algo-fébrile</td></tr>
-                    <tr><td>Fièvre Vallée du Rift</td><td>Bunyaviridae</td><td>Moustique</td><td>Variable</td></tr>
+                    <tr><td>Chikungunya</td><td>Togaviridae</td><td>Moustique</td><td>Algo-fébrile (syndrome algo-fébrile)</td></tr>
+                    <tr><td>Fièvre Vallée du Rift</td><td>Bunyaviridae</td><td>Moustique</td><td>Fièvre hémorragique</td></tr>
                     <tr><td>West Nile</td><td>Flaviviridae</td><td>Moustique</td><td>Encéphalite</td></tr>
+                    <tr><td>O’Nyong-Nyong</td><td>Togaviridae</td><td>Moustique</td><td>Algo-fébrile</td></tr>
+                    <tr><td>Fièvre de Crimée-Congo</td><td>Bunyaviridae (Nairovirus)</td><td>Tiques</td><td>Fièvre hémorragique</td></tr>
                 </table>
+                <p>Trois grands groupes cliniques : fièvres hémorragiques, syndromes algo-fébrilet (type dengue), encéphalites.</p>
 
                 <h4 id="filovirus">Filovirus (Ebola & Marburg)</h4>
                 <table>
                     <tr><th>Caractéristique</th><th>Ebola</th><th>Marburg</th></tr>
-                    <tr><td>Structure</td><td>ARN sb, enveloppé, filament</td><td>ARN, filament, enveloppé</td></tr>
-                    <tr><td>Réservoir</td><td>Chauves-souris frugivores</td><td>Singes, chauves-souris</td></tr>
-                    <tr><td>Transmission</td><td>Contact liquides biologiques</td><td>Contact, manipulation animaux</td></tr>
-                    <tr><td>Mortalité</td><td>25-90% selon souche</td><td>Élevée (83% RDC 1988-2000)</td></tr>
-                    <tr><td>Prévention</td><td colspan="2">Isolement strict, protection personnel, stérilisation</td></tr>
+                    <tr><td>Structure</td><td>ARN sb, enveloppé, filament (80 nm diamètre, long)</td><td>ARN, filament, enveloppé</td></tr>
+                    <tr><td>Réservoir</td><td>Chauves-souris frugivores</td><td>Chauves-souris, singes</td></tr>
+                    <tr><td>Transmission primaire</td><td>Contact chauves-souris, singes</td><td>Manipulation singes (Ouganda)</td></tr>
+                    <tr><td>Transmission interhumaine</td><td>Contact liquides biologiques (sang, selles, salive, sperme)</td><td>Idem Ebola</td></tr>
+                    <tr><td>Mortalité</td><td>ZEBOV 90%, SEBOV 50%, souches récentes 25%</td><td>83% (RDC 1988-2000)</td></tr>
+                    <tr><td>Zones endémiques</td><td>Bassin congolais (silence épidémique 14 ans), Afrique de l'Ouest</td><td>RDC, Ouganda, Angola</td></tr>
+                    <tr><td>Séroprévalence (IgG anti-ZEBOV)</td><td>Forêt 19,4%, plaine 12,6%, savane 10,5%, marécages 2,7%</td><td>–</td></tr>
                 </table>
+                <p><span class="badge">Prévention stricte</span> Isolement, masques/gants/surblouses, stérilisation air/équipements, destruction matériel jetable, gestion des liquides biologiques.</p>
 
-                <h4 id="grippe">Virus de la grippe (Myxovirus)</h4>
+                <h4 id="grippe">Virus de la grippe (Myxovirus influenzae)</h4>
                 <ul>
-                    <li><span class="highlight">Variation antigénique</span> (surtout type A)</li>
-                    <li>Sous-types : 16 HA (H1-H16), 9 NA (N1-N9)</li>
-                    <li>Exemples : H3N2 (Hong Kong 1968), H5N1 (aviaire), H1N1 (porc 2009)</li>
-                    <li>Transmission : voies respiratoires, mains, objets</li>
-                    <li>Prévention : mesures barrières, vaccination complexe</li>
+                    <li><span class="highlight">Variation antigénique majeure</span> (surtout type A) par mutations et réassortiments (HA et NA).</li>
+                    <li>Sous-types : 16 HA (H1-H16), 9 NA (N1-N9).</li>
+                    <li>Exemples : H3N2 (Hong Kong 1968), H5N1 (aviaire, 50% mortalité), H1N1 (porc, 2009).</li>
+                    <li>Réservoirs animaux : porc, oiseaux (réassortiments possibles).</li>
+                    <li>Transmission : voies respiratoires, mains, objets.</li>
+                    <li>Prévention : mesures barrières, vaccination complexe (adaptation annuelle).</li>
                 </ul>
 
                 <h4 id="paramyxo">Paramyxoviridae</h4>
                 <table>
                     <tr><th>Virus</th><th>Caractéristiques</th><th>Transmission</th><th>Particularités</th></tr>
-                    <tr><td>Rougeole</td><td>ARN sb enveloppé</td><td>Aérienne</td><td>Très contagieux, immunité à vie</td></tr>
-                    <tr><td>Oreillons</td><td>ARN, Paramyxovirus</td><td>Respiratoire</td><td>Orchite (20%), surdité rare</td></tr>
+                    <tr><td>Rougeole</td><td>ARN sb enveloppé, 23 génotypes</td><td>Aérienne (contagieux en incubation)</td><td>Immunité à vie après infection ou vaccination ; complications graves (malnutrition, diarrhée, VIH).</td></tr>
+                    <tr><td>Oreillons</td><td>ARN, Paramyxovirus</td><td>Respiratoire</td><td>Parotidite, orchite (20%), pancréatite, méningite, surdité rare, immunité définitive.</td></tr>
                 </table>
 
                 <h4 id="enterovirus">Entérovirus (Picornaviridae)</h4>
                 <table>
                     <tr><th>Virus</th><th>Types</th><th>Transmission</th><th>Manifestations</th></tr>
-                    <tr><td>Poliovirus</td><td>1 (virulent), 2, 3</td><td>Féco-orale</td><td>Paralysie</td></tr>
-                    <tr><td>Coxsackie A</td><td>-</td><td>Féco-orale</td><td>Syndrome mains-pieds-bouche, conjonctivite</td></tr>
-                    <tr><td>Coxsackie B</td><td>-</td><td>Féco-orale</td><td>Cardiaques, méningées, diabète juvénile</td></tr>
-                    <tr><td>Echo</td><td>-</td><td>Féco-orale</td><td>Méningite, diarrhée, exanthème</td></tr>
-                    <tr><td>Entérovirus 70</td><td>-</td><td>Féco-orale</td><td>Conjonctivite hémorragique</td></tr>
-                    <tr><td>Entérovirus 71</td><td>-</td><td>Féco-orale</td><td>Méningo-encéphalite</td></tr>
+                    <tr><td>Poliovirus</td><td>1 (virulent), 2, 3</td><td>Féco-orale</td><td>Paralysie (Heine-Médine)</td></tr>
+                    <tr><td>Coxsackie A</td><td>A (plusieurs)</td><td>Féco-orale</td><td>Syndrome mains-pieds-bouche, conjonctivite, paralysie, méningite</td></tr>
+                    <tr><td>Coxsackie B</td><td>B</td><td>Féco-orale</td><td>Cardiaques (myocardite), méningées, myalgie, diabète juvénile</td></tr>
+                    <tr><td>Echo</td><td>–</td><td>Féco-orale</td><td>Méningite, diarrhée, exanthème, atteinte respiratoire</td></tr>
+                    <tr><td>Entérovirus 70</td><td>–</td><td>Féco-orale</td><td>Conjonctivite hémorragique épidémique</td></tr>
+                    <tr><td>Entérovirus 71</td><td>–</td><td>Féco-orale</td><td>Méningo-encéphalite, syndrome pseudo-grippal</td></tr>
                 </table>
 
-                <h4 id="herpes">Herpesviridae</h4>
+                <h4 id="herpes">Herpesviridae (8 types humains)</h4>
                 <table>
                     <tr><th>Virus</th><th>Sous-famille</th><th>Latence</th><th>Pathologies</th></tr>
-                    <tr><td>HSV1</td><td>Alphaherpesvirinae</td><td>Ganglions sensitifs</td><td>Gingivostomatite, kératite, encéphalite</td></tr>
-                    <tr><td>HSV2</td><td>Alphaherpesvirinae</td><td>Ganglions sensitifs</td><td>Herpès génital, néonatal</td></tr>
+                    <tr><td>HSV1</td><td>Alphaherpesvirinae</td><td>Ganglions sensitifs</td><td>Gingivostomatite, conjonctivite, kératite, encéphalite</td></tr>
+                    <tr><td>HSV2</td><td>Alphaherpesvirinae</td><td>Ganglions sensitifs</td><td>Herpès génital, herpès néonatal</td></tr>
                     <tr><td>VZV</td><td>Alphaherpesvirinae</td><td>Ganglions sensitifs</td><td>Varicelle, zona</td></tr>
-                    <tr><td>CMV</td><td>Betaherpesvirinae</td><td>Monocytes/macrophages</td><td>Maladie à inclusions</td></tr>
-                    <tr><td>EBV</td><td>Gammaherpesvirinae</td><td>Lymphocytes B</td><td>Mononucléose, Burkitt, nasopharynx</td></tr>
-                    <tr><td>HHV6</td><td>Betaherpesvirinae</td><td>Glandes salivaires</td><td>Roséole (exanthème subit)</td></tr>
-                    <tr><td>HHV8</td><td>Gammaherpesvirinae</td><td>Cellules endothéliales</td><td>Sarcome de Kaposi</td></tr>
+                    <tr><td>CMV</td><td>Betaherpesvirinae</td><td>Monocytes/macrophages</td><td>Maladie à inclusions cytomégaliques (congénitale/acquise)</td></tr>
+                    <tr><td>EBV</td><td>Gammaherpesvirinae</td><td>Lymphocytes B</td><td>Mononucléose infectieuse, lymphome de Burkitt, carcinome nasopharyngé</td></tr>
+                    <tr><td>HHV6</td><td>Betaherpesvirinae</td><td>Glandes salivaires, monocytes</td><td>Roséole (exanthème subit) du nouveau-né</td></tr>
+                    <tr><td>HHV7</td><td>Betaherpesvirinae</td><td>Lymphocytes T CD4+</td><td>Roséole infantile (parfois)</td></tr>
+                    <tr><td>HHV8 (KSHV)</td><td>Gammaherpesvirinae</td><td>Cellules endothéliales, lymphocytes B</td><td>Sarcome de Kaposi</td></tr>
                 </table>
+                <p><span class="badge">Récurrences</span> Fréquence variable, souvent asymptomatiques, favorisées par l'immunodépression. Immunité à médiation cellulaire essentielle.</p>
 
-                <h4 id="rage">Virus de la rage (Rhabdoviridae)</h4>
+                <h4 id="rage">Virus de la rage (Rhabdoviridae, Lyssavirus)</h4>
                 <ul>
-                    <li>Structure : forme d'obus, ARN sb, enveloppé</li>
-                    <li>Transmission : morsure/griffade d'animal infecté</li>
-                    <li>Types : citadine (chiens), sylvatique (renards), chiroptères</li>
-                    <li>Diagnostic : corps de Negri (nécropsie)</li>
-                    <li>Prévention : vaccination animaux + personnes à risque</li>
+                    <li>Structure : forme d'obus, ARN sb, enveloppé, fragile (savon, éther, chaleur).</li>
+                    <li>Transmission : morsure/griffade/léchage de plaie par animal infecté (chien, renard, chauve-souris).</li>
+                    <li>Types : rage citadine (chiens, rats), rage sylvatique (renards, loups), rage des chiroptères (USA).</li>
+                    <li>Diagnostic : antigènes viraux (salive, cornée, LCR, biopsie cutanée/cérébrale), culture cellulaire, corpuscules de Negri (nécropsie).</li>
+                    <li>Prévention : vaccination des animaux domestiques, abattage des errants, vaccination préventive des personnes à risque (vétérinaires, forestiers...).</li>
                 </ul>
 
                 <h4 id="poxvirus">Poxvirus</h4>
                 <ul>
-                    <li>Variole : éradiquée en 1979 (vaccination)</li>
-                    <li>Monkeypox : Afrique Centrale/Ouest, clinique similaire à variole</li>
-                    <li>Prévention : virus de la vaccine</li>
+                    <li>Variole : éradiquée en 1979 (vaccination mondiale).</li>
+                    <li>Monkeypox (Afrique Centrale et Ouest) : clinique similaire à la variole (fièvre, douleurs, pustules).</li>
+                    <li>Transmission : contact homme – singes sauvages.</li>
+                    <li>Prévention : utilisation du virus de la vaccine (actuel) pour protéger contre Monkeypox et autres Orthopox.</li>
                 </ul>
 
                 <h4 id="hepatites">Virus des hépatites</h4>
                 <table>
-                    <tr><th>Virus</th><th>Génome</th><th>Transmission</th><th>Évolution</th></tr>
-                    <tr><td>VHA</td><td>ARN nu</td><td>Oro-fécale</td><td>Aiguë, jamais chronique, immunité définitive</td></tr>
-                    <tr><td>VHB</td><td>ADN enveloppé</td><td>Sang, sexuelle, mère-enfant</td><td>10% chronique → cirrhose, CHC</td></tr>
-                    <tr><td>VHC</td><td>ARN enveloppé</td><td>Sang ++, sexuelle possible</td><td>Chronique fréquente → cirrhose, CHC</td></tr>
-                    <tr><td>VHD</td><td>ARN défectif</td><td>Comme VHB</td><td>Co-infection ou surinfection</td></tr>
-                    <tr><td>VHE</td><td>ARN nu</td><td>Oro-fécale</td><td>Bénigne sauf femme enceinte (mortalité 20%)</td></tr>
-                    <tr><td>VHG</td><td>ARN ?</td><td>Transfusion, sang</td><td>Sévère si immunodépression ou co-infection</td></tr>
+                    <tr><th>Virus</th><th>Génome</th><th>Transmission</th><th>Évolution / Prévalence (Afrique)</th></tr>
+                    <tr><td>VHA</td><td>ARN nu (Picornavirus)</td><td>Oro-fécale</td><td>Aiguë, jamais chronique, immunité définitive</td></tr>
+                    <tr><td>VHB</td><td>ADN enveloppé (Hepadnavirus)</td><td>Sang, sexuelle, mère-enfant</td><td>10% chronique → cirrhose, CHC ; AC anti-HBs 70-95%, porteurs chroniques AgHBs 8-15% (Afrique SS)</td></tr>
+                    <tr><td>VHC</td><td>ARN enveloppé (Flavivirus)</td><td>Sang ++, sexuelle possible</td><td>Chronique fréquente → cirrhose, CHC ; prévalence AC anti-VHC 5% en Afrique (haute endémicité Asie/Afrique)</td></tr>
+                    <tr><td>VHD (Delta)</td><td>ARN défectif (enveloppe HBs)</td><td>Comme VHB (sanguine, sexuelle, mère-enfant)</td><td>Co-infection ou surinfection (aggravation). Vaccination VHB prévient VHD.</td></tr>
+                    <tr><td>VHE</td><td>ARN nu (Calicivirus)</td><td>Oro-fécale</td><td>Bénigne sauf femme enceinte (mortalité 20%) ; jamais chronique.</td></tr>
+                    <tr><td>VHG</td><td>ARN enveloppé (Flavivirus ?)</td><td>Transfusion, sang, sexuelle ?, mère-enfant</td><td>Sévère si immunodépression ou co-infection VHB/VHC ; test en développement.</td></tr>
                 </table>
 
-                <h4 id="hpv">Papillomavirus (HPV)</h4>
+                <h4 id="hpv">Papillomavirus (HPV, Papovaviridae)</h4>
                 <ul>
-                    <li>Structure : ADN db, icosaédrique, nu</li>
-                    <li>Plus de 120 types (30 à tropisme génital)</li>
+                    <li>Structure : ADN db circulaire, capside icosaédrique, nu.</li>
+                    <li>Plus de 120 types, ±30 à tropisme génital.</li>
                     <li><strong>Pathologies</strong> :
                         <ul>
-                            <li><span class="badge">Non oncogènes</span> verrues, condylomes acuminés ("crêtes de coq")</li>
-                            <li><span class="badge">Oncogènes</span> types 16, 18, 31, 33 → cancer col utérin (70% cas), cancer anal</li>
+                            <li><span class="badge">Non oncogènes</span> : verrues vulgaires/planes/plantaires, condylomes acuminés ("crêtes de coq", IST).</li>
+                            <li><span class="badge">Oncogènes</span> : types 16, 18, 31, 33 → cancer du col utérin (70% des cas), cancer anal (type 16), cancer de la peau (type 5).</li>
                         </ul>
                     </li>
-                    <li>Facteurs de risque : VIH, partenaires multiples, tabac, non circoncision</li>
+                    <li><strong>Facteurs de risque</strong> : VIH, précocité sexuelle, partenaires multiples, prédisposition génétique, tabac, non circoncision.</li>
                 </ul>
 
-                <h4 id="retrovirus">Rétrovirus (VIH)</h4>
+                <h4 id="retrovirus">Rétrovirus (VIH & HTLV)</h4>
                 <table>
-                    <tr><th>Caractéristique</th><th>Détail</th></tr>
-                    <tr><td>Type</td><td>Lentivirus, ARN, enveloppé</td></tr>
-                    <tr><td>Enzyme clé</td><td>Transcriptase inverse (ARN → ADN)</td></tr>
-                    <tr><td>Protéines</td><td>gp120 (fixation CD4), gp40 (fusion)</td></tr>
-                    <tr><td>Co-récepteurs</td><td>CCR5 (macrophages), CXCR4 (LT CD4)</td></tr>
-                    <tr><td>Groupes VIH-1</td><td>M, N, O (nombreux sous-types)</td></tr>
-                    <tr><td>Cycle</td><td>Fixation → fusion → transcription inverse → intégration → assemblage → bourgeonnement</td></tr>
-                    <tr><td>Conséquence</td><td>Destruction LT4 → immunodépression → infections opportunistes</td></tr>
+                    <tr><th>Groupe</th><th>Virus</th><th>Particularités</th></tr>
+                    <tr><td>Lentivirus</td><td>VIH-1 (groupes M, N, O) / VIH-2</td><td>SIDA ; gp120 (fixation CD4), gp40 (fusion) ; co-récepteurs CCR5/CXCR4 ; destruction LT4 → infections opportunistes.</td></tr>
+                    <tr><td>Oncovirus</td><td>HTLV-1, HTLV-2, HTLV-3, HTLV-4 (Cameroun 2005)</td><td>HTLV-1 : leucémie T de l'adulte ; HTLV-2 : leucémie à tricholeucocytes ; HTLV-3/4 : isolés, pathologie à préciser.</td></tr>
+                    <tr><td>Spumavirus</td><td>–</td><td>Aucune maladie humaine connue.</td></tr>
                 </table>
+                <p><span class="badge">Cycle VIH</span> Adsorption (gp120/CD4) → fusion → transcription inverse → intégration → assemblage → bourgeonnement.</p>
             </article>
         </section>
 
@@ -480,16 +496,16 @@
             <article id="generalites-myc" class="card">
                 <h3>1. Généralités</h3>
                 <ul>
-                    <li><strong>Mycologie</strong> = étude des champignons (mycoses)</li>
-                    <li>70 000 espèces dont ±500 pathogènes pour l'homme</li>
+                    <li><strong>Mycologie</strong> = étude des champignons (mycoses).</li>
+                    <li>70 000 espèces, ±500 pathogènes pour l'homme.</li>
                     <li><strong>Groupes</strong> :
                         <ul>
-                            <li>Filamenteux (moisissures) : hyphes septés ou non</li>
-                            <li>Levures : unicellulaires</li>
-                            <li>Macromycètes : champignons à chapeau</li>
+                            <li>Filamenteux (moisissures) : hyphes septés ou non.</li>
+                            <li>Levures : unicellulaires.</li>
+                            <li>Macromycètes : champignons à chapeau (comestibles, toxiques, hallucinogènes).</li>
                         </ul>
                     </li>
-                    <li>Habitat : sol, air, eau ; saprophytes, commensaux ou pathogènes</li>
+                    <li>Habitat : sol, air, eau ; saprophytes, commensaux ou pathogènes.</li>
                 </ul>
             </article>
 
@@ -498,170 +514,188 @@
                 <h4>Morphologie</h4>
                 <table>
                     <tr><th>Forme</th><th>Description</th><th>Exemples</th></tr>
-                    <tr><td>Levures</td><td>Unicellulaires</td><td><em>Candida, Cryptococcus</em></td></tr>
-                    <tr><td>Filaments (hyphes)</td><td>Tubes ramifiés</td><td><em>Aspergillus</em> (septé), Mucorales (non septé)</td></tr>
-                    <tr><td>Mycélium</td><td>Ensemble de filaments</td><td></td></tr>
-                    <tr><td>Pseudo-filaments</td><td>Chaînes de levures</td><td></td></tr>
+                    <tr><td>Levures</td><td>Unicellulaires</td><td><em>Candida, Cryptococcus, Malassezia</em></td></tr>
+                    <tr><td>Filaments (hyphes)</td><td>Tubes ramifiés, avec ou sans cloisons (septa)</td><td><em>Aspergillus</em> (septé), Mucorales (non septé, coenocytique)</td></tr>
+                    <tr><td>Mycélium</td><td>Ensemble de filaments (structure visible à l'œil nu)</td><td></td></tr>
+                    <tr><td>Pseudo-filaments</td><td>Chaînes de levures (allongement sans véritable hyphe)</td><td><em>Candida</em> in vivo</td></tr>
                 </table>
                 <h4>Structure eucaryote</h4>
                 <ul>
-                    <li>Noyau avec membrane</li>
-                    <li>Membrane plasmique lipoprotéique</li>
-                    <li>Paroi stratifiée (antigènes, résistance)</li>
-                    <li>Vacuoles, mitochondries</li>
+                    <li>Noyau avec membrane nucléaire.</li>
+                    <li>Membrane plasmique lipoprotéique.</li>
+                    <li>Paroi stratifiée (antigènes, résistance physico-chimique).</li>
+                    <li>Vacuoles, mitochondries.</li>
                 </ul>
                 <h4>Nutrition et croissance</h4>
                 <table>
-                    <tr><td>Mode</td><td>Hétérotrophes (matières organiques)</td></tr>
-                    <tr><td>Réserve</td><td>Glycogène</td></tr>
-                    <tr><td>Oxygène</td><td>Aérobies (majorité)</td></tr>
-                    <tr><td>Température</td><td>20-25°C (saprophytes), 37°C (pathogènes)</td></tr>
-                    <tr><td>Croissance</td><td>Apicale (allongement des hyphes)</td></tr>
+                    <tr><td>Mode</td><td>Hétérotrophes (matières organiques).</td></tr>
+                    <tr><td>Réserve</td><td>Glycogène.</td></tr>
+                    <tr><td>Oxygène</td><td>Aérobies (majorité).</td></tr>
+                    <tr><td>Température</td><td>20-25°C (saprophytes), 37°C (pathogènes).</td></tr>
+                    <tr><td>Croissance</td><td>Apicale (allongement des hyphes) → colonie fongique (mycélium) ou grain (mycétome).</td></tr>
                 </table>
                 <h4>Reproduction</h4>
                 <div class="structure-box">
 REPRODUCTION DES CHAMPIGNONS
 ├── ASEXUÉE
 │   ├── Bourgeonnement (levures)
-│   ├── Division cellulaire
-│   └── Spores
+│   ├── Division cellulaire (levures)
+│   └── Spores asexuées
 │       ├── Endogènes : sporangiospores (dans sporange)
 │       └── Exogènes : arthrospores, chlamydospores, blastospores, conidies
 │
 └── SEXUÉE
     ├── Fusion de gamètes/gamétanges
-    └── Spores : zygospore, ascospore, basidiospore
+    └── Spores sexuées : zygospore, ascospore, basidiospore
                 </div>
                 <h4>Classification</h4>
                 <table>
                     <tr><th>Critère</th><th>Types</th></tr>
-                    <tr><td>Reproduction sexuée</td><td>Présente (<em>Cryptococcus</em>) / Absente (imparfaits : <em>Aspergillus</em>)</td></tr>
-                    <tr><td>Forme de croissance</td><td>Levures / Filamenteux / Dimorphes (levure in vivo, filament in vitro)</td></tr>
+                    <tr><td>Reproduction sexuée</td><td>Présente (<em>Cryptococcus neoformans</em>) / Absente (champignons imparfaits : <em>Aspergillus</em>, <em>Candida</em> [forme imparfaite])</td></tr>
+                    <tr><td>Forme de croissance</td><td>Levures / Filamenteux / Dimorphes (phase levure in vivo, filament in vitro) : <em>Histoplasma, Sporothrix</em></td></tr>
                 </table>
             </article>
 
             <article id="mycoses-superficielles" class="card">
                 <h3>3. Mycoses superficielles</h3>
 
-                <h4 id="dermatophytoses">Dermatophytoses</h4>
-                <p>Agents : <em>Microsporum</em> (17), <em>Trichophyton</em> (22), <em>Epidermophyton floccosum</em></p>
-                <p><strong>Sources</strong> : anthropophilique, zoophilique, tellurique</p>
-                <p><strong>Atteintes</strong> :</p>
+                <h4 id="dermatophytoses">Dermatophytoses (épidermomycoses)</h4>
+                <p>Agents : <em>Microsporum</em> (17 espèces), <em>Trichophyton</em> (22 espèces), <em>Epidermophyton floccosum</em> (1 espèce).</p>
+                <p><strong>Sources</strong> : anthropophilique (homme), zoophilique (chat, chien, cheval...), tellurique (sol).</p>
+                <p><strong>Atteintes cliniques</strong> :</p>
                 <ul>
-                    <li>Peau : dermatophytie circinée, intertrigos</li>
-                    <li>Cuir chevelu : teignes</li>
-                    <li>Barbe/moustache : folliculite</li>
-                    <li>Ongles : onyxis (bord libre, pieds 80%)</li>
+                    <li><strong>Peau glabre</strong> : herpès circiné (plaque érythémato-squameuse centrifuge, bordure vésiculeuse).</li>
+                    <li><strong>Grands plis</strong> : intertrigo inguinal, axillaire, interfessier (eczéma marginé de Hébra : bordure nette, extension centrifuge).</li>
+                    <li><strong>Petits plis</strong> : intertrigo interdigito-plantaire ("pied d'athlète" : fissures, squames, macération).</li>
+                    <li><strong>Cuir chevelu</strong> : teignes (grandes ou petites plaques, cheveux cassés).</li>
+                    <li><strong>Barbe/moustache</strong> : folliculite (teigne de la barbe).</li>
+                    <li><strong>Ongles</strong> : onyxis dermatophytique (bord libre, atteinte des pieds 80%, sans périonyxis).</li>
                 </ul>
-                <p><strong>Diagnostic</strong> : examen direct (KOH) → filaments + arthrospores ; culture (Sabouraud)</p>
+                <p><strong>Diagnostic</strong> : examen direct (KOH) → filaments + arthrospores (endothrix ou ectothrix) ; culture sur Sabouraud.</p>
 
                 <h4 id="malasseziose">Malasseziose (Pityriasis versicolor)</h4>
                 <ul>
-                    <li>Agent : <em>Malassezia furfur</em> (levure lipophile)</li>
-                    <li>Facteurs : chaleur, humidité, peau grasse, grossesse, corticothérapie</li>
-                    <li>Lésions : macules hypochromiques squameuses (cou, épaules, thorax)</li>
-                    <li>Diagnostic : spores "en grappes" + filaments</li>
+                    <li>Agent : <em>Malassezia furfur</em> (levure lipophile, commensale).</li>
+                    <li>Facteurs favorisants : chaleur, humidité, sudation, peau grasse, grossesse, corticothérapie, application d'huile corporelle.</li>
+                    <li>Lésions : macules hypochromiques ou变色, rondes, squames fines (cou, épaules, thorax, avant-bras).</li>
+                    <li>Diagnostic : examen direct des squames → spores "en grappes" + filaments courts.</li>
                 </ul>
 
                 <h4 id="tinea-nigra">Tinea nigra</h4>
                 <ul>
-                    <li>Agent : <em>Hortaea werneckii</em></li>
-                    <li>Distribution : zones tropicales (sol)</li>
-                    <li>Lésions : taches brunes/noires (paumes, plantes)</li>
-                    <li>Diagnostic : filaments bruns, culture noire</li>
+                    <li>Agent : <em>Hortaea werneckii</em> (champignon imparfait, osmophile, xérophile, saprophyte du sol tropical).</li>
+                    <li>Distribution : Afrique noire, Amérique latine, Asie (Inde-Indonésie).</li>
+                    <li>Lésions : taches brunes/noires, 5-10 mm, non squameuses (paumes, plantes).</li>
+                    <li>Diagnostic : filaments mycéliens bruns + arthrospores ; culture sur Sabouraud : colonies noires humides.</li>
                 </ul>
 
-                <h4 id="piedra">Piedra</h4>
+                <h4 id="piedra">Piedra (trichophytose)</h4>
                 <table>
-                    <tr><th>Type</th><th>Agent</th><th>Distribution</th><th>Lésions</th></tr>
-                    <tr><td>Noire</td><td><em>Piedraia hortae</em></td><td>Tropicale</td><td>Nodules foncés durs (cheveux, barbe)</td></tr>
-                    <tr><td>Blanche</td><td><em>Trichosporon beigelii</em></td><td>Cosmopolite (tropicale)</td><td>Nodules mous blanchâtres (périnée, axillaire)</td></tr>
+                    <tr><th>Type</th><th>Agent</th><th>Distribution</th><th>Lésions</th><th>Diagnostic</th></tr>
+                    <tr><td>Noire</td><td><em>Piedraia hortae</em></td><td>Régions tropicales (Afrique, Am. latine, Asie)</td><td>Nodules foncés durs (1 mm) sur cheveux, barbe, moustache (aspect de chapelet).</td><td>Asques avec ascospores dans les nodules écrasés.</td></tr>
+                    <tr><td>Blanche</td><td><em>Trichosporon beigelii</em></td><td>Cosmopolite, fréquent en zones tropicales chaudes/humides</td><td>Nodules mous blanchâtres (<1 mm) sur poils (périnée, axillaire).</td><td>Levures polygonales tassées.</td></tr>
                 </table>
+                <p>Facteurs favorisants Piedra blanche : sudation, hygiène défavorable.</p>
             </article>
 
             <article id="mycoses-sous-cutanees" class="card">
                 <h3>4. Mycoses sous-cutanées</h3>
 
                 <h4 id="mycetomes">Mycétomes</h4>
+                <p>Processus pathologique avec production de "grains" (fongiques ou actinomycosiques).</p>
                 <table>
-                    <tr><th>Type</th><th>Agent</th><th>Grains</th><th>Distribution</th></tr>
-                    <tr><td>Fongique (eumycétome)</td><td><em>Madurella mycetomatis</em></td><td>Blancs/noirs</td><td>Zones nord-tropicales</td></tr>
-                    <tr><td>Actinomycosique</td><td><em>Actinomadura, Nocardia</em></td><td>Fins <1µm avec franges</td><td></td></tr>
+                    <tr><th>Type</th><th>Agents</th><th>Grains</th><th>Distribution</th></tr>
+                    <tr><td>Fongique (eumycétome)</td><td><em>Madurella mycetomatis</em> et autres</td><td>Blancs ou noirs, 2-5 µm (filaments + vésicules)</td><td>Zones nord-tropicales (Sénégal, Mauritanie, Tchad, Soudan, Somalie, Inde)</td></tr>
+                    <tr><td>Actinomycosique (bactérien)</td><td><em>Actinomadura, Nocardia</em></td><td>Fins (<1 µm) avec franges</td><td>–</td></tr>
                 </table>
-                <p>Clinique : Pied de Madura (tuméfaction → fistules → grains dans le pus)</p>
-                <p>Diagnostic : examen grains, culture (Sabouraud, Löwenstein)</p>
+                <p><strong>Clinique</strong> : Pied de Madura – tuméfaction nodulaire indolore → déformation, fistules avec pus contenant des grains (blancs/noirs).</p>
+                <p><strong>Diagnostic</strong> : examen des grains (nature), culture (Sabouraud pour champignons, Löwenstein pour Actinomyces), histopathologie.</p>
 
-                <h4 id="chromo">Chromoblastomycose</h4>
+                <h4 id="chromo">Chromoblastomycose (chromomycose)</h4>
                 <ul>
-                    <li>Agents : champignons noirs dimorphes (<em>Fonsecae</em>, etc.)</li>
-                    <li>Contamination : piqûres épines (milieux ruraux)</li>
-                    <li>Lésions : papule → nodule → forme verruqueuse (pieds, jambes)</li>
-                    <li>Complications : surinfection, éléphantiasis, cancérisation</li>
-                    <li>Diagnostic : examen direct, culture, histologie</li>
+                    <li>Agents : champignons noirs dimorphes (<em>Fonsecaea, Cladophialophora, Phialophora, Exophiala</em>).</li>
+                    <li>Contamination : piqûres d'épines (milieux ruraux).</li>
+                    <li>Distribution : cosmopolite, surtout tropicale (Madagascar, Gabon, Brésil, Venezuela).</li>
+                    <li>Lésions : papule indolore → nodule → forme verruqueuse avec hyperkératose (pieds, jambes).</li>
+                    <li>Complications : surinfection, éléphantiasis, cancérisation.</li>
+                    <li>Diagnostic : examen direct (squames), culture (Sabouraud), histologie.</li>
                 </ul>
 
                 <h4 id="mucormycoses">Mucormycoses tropicales</h4>
                 <table>
-                    <tr><th>Type</th><th>Agent</th><th>Clinique</th></tr>
-                    <tr><td>Basidiobolomycose</td><td><em>Basidiobolus ranarum</em></td><td>Nodule sous-cutané → placard dermo-hypodermique</td></tr>
-                    <tr><td>Conidiobolomycose</td><td><em>Conidiobolus coronatus</em></td><td>Granulome nasal → déformation faciale ("groin de tapir")</td></tr>
+                    <tr><th>Type</th><th>Agent</th><th>Source</th><th>Clinique</th></tr>
+                    <tr><td>Basidiobolomycose</td><td><em>Basidiobolus ranarum</em></td><td>Matières organiques animales/végétales ; transmission par piqûres ou blessures telluriques.</td><td>Nodule sous-cutané → placard dermo-hypodermique dur, chaud, douloureux ; guérison spontanée après années.</td></tr>
+                    <tr><td>Conidiobolomycose</td><td><em>Conidiobolus coronatus</em></td><td>Inhalation ou inoculation ; équidés aussi.</td><td>Granulome nasal → obstruction, rhinorrhée, épistaxis → envahissement sinus, nez, lèvre → déformation "groin de tapir".</td></tr>
                 </table>
+                <p>Diagnostic : examen direct, culture Sabouraud, histopathologie.</p>
 
                 <h4 id="sporotrichose">Sporotrichose</h4>
                 <ul>
-                    <li>Agent : <em>Sporothrix schenckii</em> (dimorphe)</li>
-                    <li>Contamination : cutanée (épines, griffures), inhalation</li>
-                    <li>Forme principale : dermato-lymphangitique "en chapelet"</li>
-                    <li>Autres formes : pulmonaire, ostéo-articulaire, disséminée</li>
-                    <li>Diagnostic : culture, histologie</li>
+                    <li>Agent : <em>Sporothrix schenckii</em> (dimorphe).</li>
+                    <li>Contamination : cutanée (piqûres d'épines, plaies souillées – cultivateurs, jardiniers), griffure de chat, inhalation (formes pulmonaires/disséminées).</li>
+                    <li>Distribution : cosmopolite ; foyers en Amérique Latine, Afrique du Sud, Inde, Japon.</li>
+                    <li>Forme la plus fréquente : dermato-lymphangitique des membres (éruption "en chapelet" le long des lymphatiques).</li>
+                    <li>Autres formes : cutanée fixe, faciale, pulmonaire, ostéo-articulaire, neuroméningée, disséminée.</li>
+                    <li>Diagnostic : examen direct rarement positif, culture (Sabouraud), histopathologie.</li>
                 </ul>
             </article>
 
             <article id="mycoses-profondes" class="card">
                 <h3>5. Mycoses profondes</h3>
 
-                <h4 id="candidoses">Candidoses</h4>
+                <h4 id="candidoses">Candidoses (moniliases)</h4>
                 <ul>
-                    <li>Agent : <em>Candida albicans</em> (levure)</li>
-                    <li>Facteurs favorisants : ATB, diabète, immunodépression, corticothérapie, macération</li>
-                    <li>Formes superficielles : muqueuses (muguet), ongles, peau</li>
-                    <li>Formes profondes : septicémies (endogène/exogène)</li>
-                    <li>Diagnostic : examen direct (levures bourgeonnantes + pseudo-mycélium), culture</li>
+                    <li>Agent principal : <em>Candida albicans</em> (levure).</li>
+                    <li>Facteurs favorisants : macération, ATB locaux ou généraux, diabète, carences, cancers, immunodépression (VIH, corticothérapie), cathéters.</li>
+                    <li>Formes superficielles : muguet (muqueuses buccales), périonyxis, onyxis (avec périonyxis), intertrigos, vulvovaginite.</li>
+                    <li>Formes profondes : septicémies (endogènes – digestives, ou exogènes – cathéter), candidoses viscérales.</li>
+                    <li>Diagnostic : examen direct (levures bourgeonnantes + pseudo-mycélium), culture (colonies blanc crème).</li>
                 </ul>
 
                 <h4 id="cryptococcose">Cryptococcose</h4>
                 <ul>
-                    <li>Agent : <em>Cryptococcus neoformans</em> (levure encapsulée)</li>
-                    <li>Facteurs : immunodépression (Sida, cancer)</li>
-                    <li>Porte d'entrée : pulmonaire</li>
-                    <li>Forme principale : méningo-encéphalite subaiguë</li>
-                    <li>Diagnostic : encre de Chine (capsule), culture, sérologie</li>
+                    <li>Agent : <em>Cryptococcus neoformans</em> (levure encapsulée, 3-8 µm, reproduction par bourgeonnement).</li>
+                    <li>Réservoir : sol contaminé par fientes d'oiseaux (pigeons), eucalyptus (spores).</li>
+                    <li>Facteurs favorisants : immunodépression (Sida, hémopathies, corticothérapie).</li>
+                    <li>Formes cliniques :
+                        <ul>
+                            <li>Pulmonaire : pseudo-grippale ou abcès/fibrose.</li>
+                            <li>Neuroméningée : méningo-encéphalite subaiguë (cryptocoques dans LCR).</li>
+                            <li>Disséminée : septicémie fatale, atteintes os, peau, prostate, etc.</li>
+                        </ul>
+                    </li>
+                    <li>Diagnostic : encre de Chine (capsule visible), culture (Sabouraud), sérologie (LCR, sang, urines).</li>
                 </ul>
 
                 <h4 id="pneumocystose">Pneumocystose humaine</h4>
                 <ul>
-                    <li>Agent : <em>Pneumocystis jirovecii</em></li>
-                    <li>Terrain : immunodéprimés (CD4 <200/mm³)</li>
-                    <li>Transmission : inhalation, interhumaine possible</li>
-                    <li>Clinique : pneumopathie</li>
-                    <li>Diagnostic : recherche dans LBA (coloration spéciale)</li>
+                    <li>Agent : <em>Pneumocystis jirovecii</em> (trois formes : kystes matures, trophozoïtes, kystes vides).</li>
+                    <li>Transmission : inhalation (air contaminé, interhumaine possible en milieu hospitalier).</li>
+                    <li>Terrain : immunodéprimés (CD4 <200/mm³ chez le VIH).</li>
+                    <li>Clinique : pneumopathie interstitielle fébrile.</li>
+                    <li>Diagnostic : recherche des formes dans le liquide de lavage broncho-alvéolaire (LBA) après coloration spéciale.</li>
                 </ul>
 
                 <h4 id="histoplasmose">Histoplasmose</h4>
                 <table>
-                    <tr><th>Type</th><th>Agent</th><th>Distribution</th><th>Clinique</th></tr>
-                    <tr><td>Américaine</td><td><em>H. capsulatum</em></td><td>Amérique</td><td>Pulmonaire (aiguë/chronique), disséminée</td></tr>
-                    <tr><td>Africaine</td><td><em>H. duboisii</em></td><td>Afrique</td><td>Nodules cutanés, abcès osseux</td></tr>
+                    <tr><th>Type</th><th>Agent (dimorphes)</th><th>Distribution</th><th>Clinique</th></tr>
+                    <tr><td>Américaine (classique)</td><td><em>Histoplasma capsulatum</em></td><td>Amériques, Afrique ?</td><td>Forme pulmonaire aiguë/chronique (ressemble tuberculose), disséminée (enfant, immunodéprimé).</td></tr>
+                    <tr><td>Africaine</td><td><em>Histoplasma duboisii</em></td><td>Afrique tropicale</td><td>Nodules cutanés ulcérés, abcès osseux, atteinte généralisée rarement pulmonaire.</td></tr>
                 </table>
-                <p><strong>Diagnostic</strong> : levures intracellulaires (expectorations, pus) ; culture (dimorphisme) ; sérologie (histoplasmine)</p>
+                <p><strong>Diagnostic</strong> : examen direct (levures intracellulaires dans expectorations, pus, sang), culture (mycélium avec macro/microconidies), sérologie (histoplasmine).</p>
 
                 <h4 id="aspergillose">Aspergillose</h4>
                 <ul>
-                    <li>Agent : <em>Aspergillus fumigatus</em> (principal)</li>
-                    <li>Habitat : sol, matières organiques, air</li>
-                    <li>Formes : aspergillome, allergique, invasive, extrapulmonaire</li>
-                    <li>Toxines : <em>A. flavus</em> → aflatoxines (hépatocarcinome)</li>
-                    <li>Diagnostic : direct, culture, sérologie, histologie</li>
+                    <li>Agent : <em>Aspergillus</em> (filamenteux). Espèces principales : <em>A. fumigatus</em> (+++), <em>A. flavus, A. niger, A. terreus</em>.</li>
+                    <li>Habitat : sol, matières organiques en décomposition, air (spores).</li>
+                    <li>Formes cliniques :
+                        <ul>
+                            <li>Aspergillose pulmonaire : aspergillome (boule fungique dans cavité), pneumopathie allergique, aspergillose invasive (immunodéprimés).</li>
+                            <li>Extrapulmonaire : oculaire, otomycose, sinusite, onyxis.</li>
+                            <li>Toxique : <em>A. flavus</em> produit des aflatoxines (hépatocarcinome).</li>
+                        </ul>
+                    </li>
+                    <li>Diagnostic : examen direct, culture Sabouraud, sérologie, histologie.</li>
                 </ul>
             </article>
 
@@ -669,15 +703,15 @@ REPRODUCTION DES CHAMPIGNONS
                 <h3>📊 Tableau récapitulatif des mycoses</h3>
                 <table>
                     <tr><th>Type</th><th>Agents principaux</th><th>Localisation</th><th>Diagnostic</th></tr>
-                    <tr><td>Superficielles</td><td>Dermatophytes, <em>Malassezia</em>, <em>Hortaea</em>, <em>Piedraia</em>, <em>Trichosporon</em></td><td>Peau, phanères</td><td>KOH, culture</td></tr>
-                    <tr><td>Sous-cutanées</td><td><em>Madurella</em>, <em>Fonsecae</em>, <em>Basidiobolus</em>, <em>Sporothrix</em></td><td>Tissu sous-cutané</td><td>Grains, culture, histologie</td></tr>
-                    <tr><td>Profondes</td><td><em>Candida</em>, <em>Cryptococcus</em>, <em>Pneumocystis</em>, <em>Histoplasma</em>, <em>Aspergillus</em></td><td>Viscères, système nerveux</td><td>Direct, culture, sérologie, histologie</td></tr>
+                    <tr><td>Superficielles</td><td>Dermatophytes, <em>Malassezia</em>, <em>Hortaea</em>, <em>Piedraia</em>, <em>Trichosporon</em></td><td>Peau, phanères (cheveux, ongles)</td><td>KOH, culture Sabouraud</td></tr>
+                    <tr><td>Sous-cutanées</td><td><em>Madurella</em>, <em>Fonsecaea</em>, <em>Basidiobolus</em>, <em>Conidiobolus</em>, <em>Sporothrix</em></td><td>Tissu sous-cutané, lymphatiques</td><td>Grains, culture, histopathologie</td></tr>
+                    <tr><td>Profondes</td><td><em>Candida</em>, <em>Cryptococcus</em>, <em>Pneumocystis</em>, <em>Histoplasma</em>, <em>Aspergillus</em></td><td>Viscères (poumon, SNC, etc.), disséminée</td><td>Examen direct, culture, sérologie, histologie</td></tr>
                 </table>
             </article>
         </section>
 
         <footer>
-            <p>Fiche de révision générée d'après le cours de Microbiologie Médicale – L1 | Tous droits réservés à l'auteur.</p>
+            <p>Fiche de révision enrichie d'après le cours de Microbiologie Médicale – L1 (Dr Kayembe) | Tous droits réservés à l'auteur.</p>
         </footer>
     </main>
 </body>
