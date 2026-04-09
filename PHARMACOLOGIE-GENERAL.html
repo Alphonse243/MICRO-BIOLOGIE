@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de Pharmacologie Générale - Révision</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #27ae60;
+            --bg-color: #ecf0f1;
+            --text-color: #333;
+            --box-bg: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-card {
+            background: var(--box-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .section-card h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .section-card h3 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #c0392b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #bdc3c7;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pharmacologie Générale</h1>
+        <p>Fiche de Révision Interactive - Édition 2019-2020</p>
+    </header>
+
+    <nav>
+        <a href="#generalites">Généralités</a>
+        <a href="#pharmacocinetique">Pharmacocinétique</a>
+        <a href="#pharmacodynamie">Pharmacodynamie</a>
+        <a href="#effets-indesirables">Effets Indésirables</a>
+    </nav>
+
+    <div class="container">
+
+        <div id="generalites" class="section-card">
+            <h2>1. Terminologies et Généralités</h2>
+            <p>La pharmacologie est la science qui traite des rapports de la matière vivante avec le milieu chimique environnant.</p>
+            <h3>Caractéristiques d'un médicament</h3>
+            <ul>
+                <li><span class="highlight">Pro-médicament :</span> Médicament fixé sur un vecteur inactif, libéré dans l'organisme (ex: Palmitate de chloramphénicol).</li>
+                <li><span class="highlight">Précurseur :</span> Molécule rendue active au cours de son métabolisme.</li>
+            </ul>
+            <h3>Nomenclature</h3>
+            <ul>
+                <li><strong>Nom chimique :</strong> Structure de la molécule.</li>
+                <li><strong>DCI (Nom générique) :</strong> Désignation Commune Internationale (ex: Paracétamol).</li>
+                <li><strong>Nom de spécialité :</strong> Nom commercial déposé (ex: Doliprane).</li>
+            </ul>
+        </div>
+
+        <div id="pharmacocinetique" class="section-card">
+            <h2>2. Pharmacocinétique (ADME)</h2>
+            <p>Étude du devenir du médicament dans l'organisme.</p>
+            
+            <h3>A. Absorption</h3>
+            <p>Processus par lequel le médicament pénètre dans la circulation systémique. Influencé par :</p>
+            <ul>
+                <li><strong>L'effet de premier passage hépatique :</strong> Destruction métabolique par le foie avant l'arrivée dans la circulation générale (concerne surtout la voie orale).</li>
+                <li><strong>Biodisponibilité (F) :</strong> Fraction de la dose atteignant la circulation systémique et sa vitesse d'apparition.</li>
+            </ul>
+
+            <h3>D. Distribution</h3>
+            <p>Répartition entre le plasma et les tissus. Limitée par la <strong>fixation aux protéines plasmatiques</strong> (Albumine pour les acides, Alpha-1-glycoprotéine pour les bases).</p>
+
+            <h3>M. Métabolisme</h3>
+            <p>Transformation hépatique pour rendre les molécules plus polaires (éliminables).</p>
+            <ul>
+                <li><strong>Phase I :</strong> Oxydation (Cytochrome P450), réduction, hydrolyse.</li>
+                <li><strong>Phase II :</strong> Conjugaison (ex: Glucuronoconjugaison).</li>
+            </ul>
+
+            <h3>E. Élimination</h3>
+            <p>Majoritairement rénale (Filtration glomérulaire, sécrétion active, réabsorption passive) et biliaire. Évaluée par la <strong>clairance</strong>.</p>
+        </div>
+
+        <div id="pharmacodynamie" class="section-card">
+            <h2>3. Pharmacodynamie</h2>
+            <p>L'étude de l'action du médicament sur l'organisme, principalement via des <strong>récepteurs</strong>.</p>
+            
+            <h3>Les 4 grandes familles de récepteurs</h3>
+            <table>
+                <tr>
+                    <th>Type de Récepteur</th>
+                    <th>Mécanisme</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td>Canaux Ioniques</td>
+                    <td>Contrôle de l'ouverture d'un canal (Na+, Cl-)</td>
+                    <td>Récepteurs nicotiniques (Acétylcholine)</td>
+                </tr>
+                <tr>
+                    <td>Enzymes</td>
+                    <td>Activité enzymatique intracellulaire (Kinase)</td>
+                    <td>Récepteur de l'insuline</td>
+                </tr>
+                <tr>
+                    <td>Couplés aux Protéines G</td>
+                    <td>7 domaines transmembranaires, seconds messagers (AMPc, IP3)</td>
+                    <td>Récepteurs muscariniques</td>
+                </tr>
+                <tr>
+                    <td>Cytosoliques / Nucléaires</td>
+                    <td>Modification de la transcription de l'ADN</td>
+                    <td>Hormones stéroïdiennes</td>
+                </tr>
+            </table>
+
+            <h3>Interactions Médicamenteuses</h3>
+            <ul>
+                <li><span class="highlight">Synergie :</span> Renforcement de l'effet (Additive, Compétitive, Potentialisation).</li>
+                <li><span class="highlight">Antagonisme :</span> Réduction de l'effet (Compétitif, Non-compétitif, Chimique, Physiologique).</li>
+            </ul>
+        </div>
+
+        <div id="effets-indesirables" class="section-card">
+            <h2>4. Effets Indésirables et Toxicologie</h2>
+            
+            <h3>Type A (Prévisibles, liés à la dose)</h3>
+            <ul>
+                <li><strong>Catégoriels :</strong> Prolongement de l'effet principal (ex: alopécie avec les anticancéreux).</li>
+                <li><strong>Latéraux :</strong> Liés au manque de spécificité (ex: sécheresse buccale avec l'atropine).</li>
+            </ul>
+
+            <h3>Type B (Imprévisibles)</h3>
+            <ul>
+                <li><strong>Allergiques :</strong> Choc anaphylactique (Type I, IgE), Cytotoxique (Type II), Maladie sérique (Type III), Retardée (Type IV).</li>
+                <li><strong>Idiosyncrasiques :</strong> Souvent génétiques (ex: Hémolyse sévère due au déficit en G-6-PD avec la primaquine).</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Document généré pour la préparation aux examens de Pharmacologie Générale.</p>
+    </footer>
+
+</body>
+</html>
